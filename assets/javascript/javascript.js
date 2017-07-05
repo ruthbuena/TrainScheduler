@@ -27,6 +27,7 @@ var deleteTrain = '';
      	destination = $('#destinationAdd').val().trim();
      	firstTrainTime = $('#firstTrain').val().trim();
      	frequency = $('#frequencyAdd').val().trim();
+
           firstTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
           currentTime = moment();
           diffTime = moment().diff(moment.unix(firstTimeConverted), "minutes");
@@ -41,8 +42,8 @@ var deleteTrain = '';
      		destination: destination,
      		firstTrainTime: firstTrainTime,
      		frequency: frequency,
-               nextTrainSch: nextTrainSch,
-               minutesTillNext: minutesTillNext
+        nextTrainSch: nextTrainSch,
+        minutesTillNext: minutesTillNext
      	});
 
       $('#nameAdd').val('');
@@ -56,7 +57,7 @@ var deleteTrain = '';
 
 
 		$('.train-schedule').append("<tr class='table-row' id=" + "'" + childSnapshot.key() + "'" + ">" +
-               "<td class='col-xs-3'>" + childSnapshot.val().TrainName +
+               "<td class='col-xs-3'>" + childSnapshot.val().name +
                "</td>" +
                "<td class='col-xs-2'>" + childSnapshot.val().destination +
                "</td>" +
