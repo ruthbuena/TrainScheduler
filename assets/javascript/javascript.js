@@ -56,7 +56,7 @@ var deleteTrain = '';
 
 
 		$('.train-schedule').append("<tr class='table-row' id=" + "'" + childSnapshot.key() + "'" + ">" +
-               "<td class='col-xs-3'>" + childSnapshot.val().name +
+               "<td class='col-xs-3'>" + childSnapshot.val().TrainName +
                "</td>" +
                "<td class='col-xs-2'>" + childSnapshot.val().destination +
                "</td>" +
