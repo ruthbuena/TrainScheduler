@@ -23,7 +23,7 @@ var deleteTrain = '';
 // Event on click; AJAX used to add trains
   $("#add-train").on("click", function() {
 
-     	name = $('#nameAdd').val().trim();
+     	trainName = $('#nameAdd').val().trim();
      	destination = $('#destinationAdd').val().trim();
      	firstTrainTime = $('#firstTrain').val().trim();
      	frequency = $('#frequencyAdd').val().trim();
@@ -57,7 +57,7 @@ var deleteTrain = '';
 
 
 		$('.train-schedule').append("<tr class='table-row' id=" + "'" + childSnapshot.key() + "'" + ">" +
-               "<td class='col-xs-3'>" + childSnapshot.val().name +
+               "<td class='col-xs-3'>" + childSnapshot.val().trainName +
                "</td>" +
                "<td class='col-xs-2'>" + childSnapshot.val().destination +
                "</td>" +
